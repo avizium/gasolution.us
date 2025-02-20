@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>TAX SERVICES | GAS</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="css/search.css">
+
+    <!--JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/rd-smoothscroll.min.js"></script>
+
+
+    <!--[if lt IE 9]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+            <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script src='js/device.min.js'></script>
+  </head>
+  <body>
+  <div class="page">
+  <!--========================================================
+                            HEADER
+  =========================================================-->
+    <header>  
+      <div class="container top-sect">
+        <div class="navbar-header">
+          <h1 class="navbar-brand">
+            <a data-type='rd-navbar-brand'  href="./">Global Alliance Solution <small style="font-size:14px">Strive for Excellence to Exceed Expectations</small></a> 
+          </h1>
+          <a class="search-form_toggle" href="#"></a>
+        </div>
+
+        <div class="help-box text-right">
+          <p>Tax Hotline</p>
+          <a href="callto:#">202-618-7058</a>
+          <small><span>Hours:</span>  9am-6pm EST M-F; &nbsp;9am-3pm EST Sat</small>
+        </div>
+      </div>
+
+
+      <div id="stuck_container" class="stuck_container">
+        <div class="container">   
+        <nav class="navbar navbar-default navbar-static-top pull-left">
+
+            <div class="">  
+              <ul class="nav navbar-nav sf-menu" data-type="navbar">
+                <li>
+                  <a href="./">HOME</a>
+                </li>
+                <li>
+                  <a href="about-us.html">ABOUT</a>
+                </li>
+                <li class="dropdown">
+                  <a href="services.html">SERVICES<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="tax-services.html#tax-services">Tax Services</a>
+                    </li>
+                    <li>
+                      <a href="tax-services.html#individual-tax">Individual Tax</a>                      
+                    </li>
+                    <li>
+                      <a href="tax-services.html#estate-trust">Estate and Trusts</a>
+                    </li>
+                    <li>
+                      <a href="tax-services.html#business-tax">Businesses Tax</a>
+                    </li>
+                    <li>
+                      <a href="tax-services.html#partnership">Partnerships</a>
+                    </li>                                                        
+                    <li>
+                      <a href="tax-services.html#non-profit">Non-Profit Org </a>
+                    </li>
+                    <li>
+                      <a href="forms.html">GASolution Forms</a>
+                    </li>                    
+                  </ul>
+                </li>                
+                <li>
+                  <a href="promotion.html">PROMOTION</a>
+                </li>
+                <li>
+                  <a href="global-referral.html">GRP</a>
+                </li>                
+                <li>
+                  <a href="contact-us.html">CONTACTS</a>
+                </li>
+                <li>
+                  <a href="https://www.gasolution.us/cheaology">CHEAOLOGY</a>
+                </li>
+              </ul>                           
+            </div>
+        </nav>    
+        <form class="search-form" action="search.html" method="GET" accept-charset="utf-8">
+          <label class="search-form_label">
+            <input class="search-form_input" type="text" name="s" autocomplete="off" placeholder=""/>
+            <span class="search-form_liveout"></span>
+          </label>
+          <button class="search-form_submit fa-search" type="submit"></button>
+        </form>
+        </div>
+
+      </div>  
+    </header>
+
+  <!--========================================================
+                            CONTENT
+  =========================================================-->
+
+    <main>        
+
+      <section class="well well4">
+        <div class="container">
+          <h2>
+            Recover My 
+            <small>
+              Partner ID
+            </small>
+          </h2>	  
+          <div class="row offs2">
+
+				<div class="col-lg-12">
+				    <div class="row">
+				        <div class="row">
+				            <div class="col-md-6 col-md-offset-4">
+				                <div class="panel panel-default">
+				                    <div class="panel-body">
+				                        <div class="text-center">
+				                          <h3><i class="fa fa-lock"></i></h3>
+				                          <h2 class="text-center">Forgot Your ID?</h2>
+				                          <p>You can request your ID here.</p>
+				                            <div class="panel-body">
+				                              <?php
+				                              	$referral_email = "";
+												
+												if(!empty($_GET['referralEmail'])) { $referral_email = $_GET['referralEmail'];}													
+				                              ?>
+				                              <form role="form" action="gas-api-forms/index.php/client/get_partnerid" class="partnerID">
+				                                <fieldset>
+				                                  <div class="form-group">
+				                                    <div class="input-group">
+				                                      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+				                                      
+				                                      <input id="referralEmail" name="referralEmail" value="<?php echo $referral_email; ?>"  placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+				                                    </div>
+				                                  </div>
+				                                  <div class="form-group">
+				                                    <input class="btn btn-lg btn-primary btn-block" value="Send My Partner ID" type="submit">
+				                                  </div>
+				                                </fieldset>
+				                              </form>
+				                              
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				                <div class="jsMessage"></div>
+				            </div>
+				        </div>
+				    </div>	
+				</div>				
+			</div>
+          </div>
+        </div>
+      </section>   
+      
+
+    </main>
+
+    <!--========================================================
+                            FOOTER
+  =========================================================-->
+  <footer>
+    <section class="well1">
+      <div class="container"> 
+            <p class="rights">
+              Global Alliance Solution  &#169; <span id="copyright-year"></span>
+              <a href="policy.html">Privacy Policy</a>
+              | <a rel="nofollow" href="http://www.gasolution.us/" target="_blank">GAS</a>
+            </p>          
+      </div> 
+    </section>     
+  </footer>
+  </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->         
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/tm-scripts.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$('form.partnerID').on('submit', function(form){
+    			form.preventDefault();
+    			$.post('gas-api-forms/index.php/client/get_partnerid', $('form.partnerID').serialize(), function(data){
+    				$('div.jsMessage').html(data);
+    			});
+    		});
+    	});
+    </script>         
+  <!-- </script> -->
+
+<!-- coded by vitlex -->
+
+  </body>
+</html>
